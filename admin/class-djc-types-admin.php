@@ -72,6 +72,11 @@ class Djc_Types_Admin {
             ]
         );
         
+        $dienst->options([
+            'hierarchical'  => true,
+            'supports'      => ['title', 'editor', 'page-attributes']
+        ]);
+        
         $dienst->register();
         
         $projects = new PostType(
