@@ -84,5 +84,8 @@ class Djc_Types_Admin {
         );
         
         $projects->register();
+        
+        $employees = new PostType('employee');
+        $employees->register();
     }
 }
