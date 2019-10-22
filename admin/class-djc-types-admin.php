@@ -88,9 +88,24 @@ class Djc_Types_Admin {
             ]
         );
         
+        $projects->options([
+            'supports'  => ['title', 'editor', 'thumbnail']
+        ]);
+        $projects->taxonomy('middel');
+        
         $projects->register();
         
         $employees = new PostType('employee');
         $employees->register();
+        
+        $method = new \PostTypes\Taxonomy([
+            'name' => 'middel',
+            'singular' => 'Middel',
+            'plural' => 'Middelen',
+            'slug' => 'middelen'
+        ]);
+        
+        $method->register();
+        
     }
 }
