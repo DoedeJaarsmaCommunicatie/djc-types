@@ -96,6 +96,9 @@ class Djc_Types_Admin {
         $projects->register();
         
         $employees = new PostType('employee');
+        $employees->options([
+            'supports'  => ['title']
+        ]);
         $employees->register();
         
         $method = new \PostTypes\Taxonomy([
