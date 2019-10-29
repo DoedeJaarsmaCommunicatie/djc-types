@@ -74,7 +74,7 @@ class Djc_Types_Admin {
         
         $dienst->options([
             'hierarchical'  => true,
-            'supports'      => ['title', 'editor', 'page-attributes']
+            'supports'      => ['title', 'editor', 'page-attributes', 'excerpt']
         ]);
         
         $dienst->register();
@@ -89,7 +89,7 @@ class Djc_Types_Admin {
         );
         
         $projects->options([
-            'supports'  => ['title', 'editor', 'thumbnail']
+            'supports'  => ['title', 'editor', 'thumbnail', 'excerpt']
         ]);
         $projects->taxonomy('middel');
         
